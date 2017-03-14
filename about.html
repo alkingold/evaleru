@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/jquery-ui.min.css">
+	<script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+
+	<title>Eva Leru/About</title>
+</head>
+<body>
+	<header class="header_pages">
+		<div id="flower_pages">
+			<a href="index.html" title="to main"><img src="images/fleur_horizontal_eva_leru.png" alt="sketch of a flower"></a>
+		</div>
+		<nav id="nav_pages">
+			<ul>
+				<li><a href="about.html" id="about_link">About</a></li>
+				<li><a href="video.html">Video</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="clear"></div>
+	</header>
+	<section class="section_pages">
+	    <h1>About</h1>
+		    <div id="anim_article">
+			    <article class="article_pages">
+				      <p>Hello,</p>
+				      <p>My name is Eva and I am video sketcher.</p>
+				      <p>I am walking down the life, watching all that happens like a film and from time to time make video sketches about it. My short films it is the life through my eyes.</p>
+				      <p>I love natural live video without "blur" it with lots of animations, postproduction and visual effects.</p>
+				      <p>I watch and try to show through my videos the beauty of life how it is.</p>
+				      <p>Welcome.</p>
+				      <p>Sincerely yours.</p>
+		    	</article>
+		    </div>
+	</section>
+	<footer class="footer_pages footer_about">
+		<div id="reseaux_sociaux_pages">
+			<a href="https://vimeo.com/evaleru" target="_blank"><img src="images/vimeo.png" alt="vimeo"></a>
+			<a href="https://vk.com/eva.leru" target="_blank"><img src="images/vkontakte_2.png" alt="vkontakte"/></a>
+			<a href="https://www.facebook.com/eva.leru" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+			<a href="https://www.linkedin.com/in/evaleru" target="_blank"><img src="images/linkedin_2.png" alt="linkedin"></a>
+		</div>
+		<div id="copyright">© 2016 <a href="https://fr.linkedin.com/in/alexandra-	bogdanova-415a85122" target="_blank">Alexandra Bogdanova</a>
+    	</div>
+		<div id="palette_pages">
+			<img src="images/black_splashes.png" alt="black ink slpashes">
+		</div>
+		<div id="pinceaux_pages">
+			<img src="images/plume_noir.png" alt="fountain pen">
+		</div>
+	</footer>
+	<script type="text/javascript">
+		$('li a').addClass('scaleOut');
+		var aboutWidth = $('.article_pages').width() + 8;
+		var aboutHeightPadding = parseInt($('.article_pages').css('padding-bottom')) * 2;
+		var aboutHeight = $('.article_pages').height() + 8 + aboutHeightPadding;
+		$('#anim_article').css({
+			height: 0,
+			width:0
+		});
+
+		/*setTimeout(function(){
+			$('li:first-of-type a').removeClass('scaleOut', 400, function(){
+				$('li:nth-of-type(2) a').removeClass('scaleOut', 400, function(){
+					$('li:last-of-type a').removeClass('scaleOut', 400);
+				});
+			});
+		}, 400);*/
+		setTimeout(function(){
+			$('li:first-of-type a').removeClass('scaleOut', 400);
+		}, 400);
+		setTimeout(function(){
+			$('li:nth-of-type(2) a').removeClass('scaleOut', 400);
+		}, 800);
+		setTimeout(function(){
+			$('li:last-of-type a').removeClass('scaleOut', 400);
+		}, 1200);
+	</script>
+	<script type="text/javascript">
+		setTimeout(function(){
+			$('#anim_article').animate({
+				width:aboutWidth,
+				height: aboutHeight		
+			}, 800, function(){
+				$(this).css({
+					width: '100%',
+					height: 'auto'
+				});
+			});
+		}, 1600);
+		
+
+	</script>
+</body>
+</html>

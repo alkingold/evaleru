@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/jquery-ui.min.css">
+	<script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<title>By Eva Leru </title>
+</head>
+<body>
+	<header>
+		<div id="flower">
+			<a href="index.html"><img src="images/fleur_horizontal_eva_leru.png" alt="sketch flower by Eva Leru"></a>
+		</div>
+	</header>
+	<section>
+	<nav>
+		<ul>
+			<li><a href="about.html" class="scaleOut">About</a></li>
+			<li><a href="video.html" class="scaleOut">Video</a></li>
+			<li><a href="contact.html" class="scaleOut">Contact</a></li>
+		</ul>
+	</nav>
+	</section>
+	<footer>
+		<div id="reseaux_sociaux">
+			<a href="https://vimeo.com/evaleru" target="_blank"><img src="images/vimeo.png" alt="vimeo"></a>
+			<a href="https://vk.com/eva.leru" target="_blank"><img src="images/vkontakte_2.png" alt="vkontakte"/></a>
+			<a href="https://www.facebook.com/eva.leru" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+			<a href="https://www.linkedin.com/in/evaleru" target="_blank"><img src="images/linkedin_2.png" alt="linkedin"></a>
+		</div>
+		<div id="copyright">© 2016 <a href="https://fr.linkedin.com/in/alexandra-	bogdanova-415a85122" target="_blank">Alexandra Bogdanova</a>
+    	</div>
+		<div id="palette">
+			<img src="images/black_splashes.png" alt="black ink splashes">
+		</div>
+		<div id="pinceaux">
+			<img src="images/plume_noir.png" alt="fountain pen">
+		</div>
+	</footer>
+	<script type="text/javascript">
+		$('li a').addClass('scaleOut');
+		/*setTimeout(function(){
+			$('li:first-of-type a').removeClass('scaleOut', 400, function(){
+				$('li:nth-of-type(2) a').removeClass('scaleOut', 400, function(){
+					$('li:last-of-type a').removeClass('scaleOut', 400);
+				});
+			});
+		}, 400);*/
+		setTimeout(function(){
+			$('li:first-of-type a').removeClass('scaleOut', 400);
+		}, 400);
+		setTimeout(function(){
+			$('li:nth-of-type(2) a').removeClass('scaleOut', 400);
+		}, 800);
+		setTimeout(function(){
+			$('li:last-of-type a').removeClass('scaleOut', 400);
+		}, 1200);
+	</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="scripts/jquery-ui.min.css">
+	<script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<title>Eva Leru/Contact</title>
+</head>
+<body>
+	<header>
+		<div id="flower_pages">
+			<a href="index.html" title="to main"><img src="images/fleur_horizontal_eva_leru.png" alt="sketch of a flower : Eva Leru logo"></a>
+		</div>
+		<nav id="nav_pages">
+		<ul>
+			<li><a href="about.html">About</a></li>
+			<li><a href="video.html">Video</a></li>
+			<li><a href="contact.html" id="contact_link">Contact</a></li>
+		</ul>
+		</nav>
+	</header>
+  <div class="clear"></div>
+  <h1>Contact</h1>
+	<div id="center_contacts">
+		<div class="contacts">
+			<p>e-mail: <a href="mailto:eva.leru@gmail.com">eva.leru@gmail.com</a></p>
+			<p>mobile: +33 6 03 23 81 00</p>
+		</div>
+	</div>
+	<footer class="footer_pages footer_contact">
+		<div id="reseaux_sociaux_pages">
+			<a href="https://vimeo.com/evaleru" target="_blank"><img src="images/vimeo.png" alt="vimeo"></a>
+			<a href="https://vk.com/eva.leru" target="_blank"><img src="images/vkontakte_2.png" alt="vkontakte"/></a>
+			<a href="https://www.facebook.com/eva.leru" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+			<a href="https://www.linkedin.com/in/evaleru" target="_blank"><img src="images/linkedin_2.png" alt="linkedin"></a>
+		</div>
+		<div id="copyright">© 2016 <a href="https://fr.linkedin.com/in/alexandra-bogdanova-415a85122" target="_blank">Alexandra Bogdanova</a>
+    	</div>
+		<div id="palette_pages">
+			<img src="images/black_splashes.png" alt="ink splashes">
+		</div>
+		<div id="pinceaux_pages">
+			<img src="images/plume_noir.png" alt="fountain pen">
+		</div>
+	</footer>
+	<script type="text/javascript">
+		// set scale du menu à 0 au chargement de la page
+		$('li a').addClass('scaleOut');
+
+		// Récupérer la largeur et la hauteur de la div contacts
+		var contactsWidth = $('.contacts').width();
+		var contactsWidthPx = contactsWidth + 'px';
+		var contactsHeight = $('.contacts').height();
+		var contactsHeightPx = contactsHeight + 'px';
+		var contactWidth = $('.contacts').width() + 20;
+		var contactHeight = $('.contacts').height() + 12;
+		$('.center').addClass('fixeSize');
+		$('.fixeSize').css({
+			width: contactsWidthPx,
+			height: contactsHeightPx
+		});
+
+		// cacher la div contact au chargement de la page
+		$('#center_contacts').addClass('widthHeight');
+
+		
+		/*setTimeout(function(){
+			$('li:first-of-type a').removeClass('scaleOut', 400, function(){
+				$('li:nth-of-type(2) a').removeClass('scaleOut', 400, function(){
+					$('li:last-of-type a').removeClass('scaleOut', 400);
+				});
+			});
+		}, 400);*/
+		
+		// affichage du menu un par un en scale
+		setTimeout(function(){
+			$('li:first-of-type a').removeClass('scaleOut', 400);
+		}, 400);
+		setTimeout(function(){
+			$('li:nth-of-type(2) a').removeClass('scaleOut', 400);
+		}, 800);
+		setTimeout(function(){
+			$('li:last-of-type a').removeClass('scaleOut', 400);
+		}, 1200);
+
+
+
+		setTimeout(function(){
+			$('#center_contacts').animate({
+					width: contactWidth, 
+					height: contactHeight
+				}, 1000, function(){
+					$(this).css({
+						width: '100%',
+						height: 'auto'
+					});
+			});
+		}, 1600);
+	</script>
+</body>
+</html>
